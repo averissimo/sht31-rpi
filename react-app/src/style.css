@@ -1,0 +1,27 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "calendar plot1"
+    "calendar plot2";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+}
+
+.header {
+  grid-area: header;
+}
+
+.calendar {
+  grid-area: calendar;
+}
+
+.plot-temp {
+  grid-area: plot1;
+}
+
+.plot-humd {
+  grid-area: plot2;
+}
