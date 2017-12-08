@@ -133,7 +133,7 @@ export default class Hello extends React.Component {
               defaultValue={this.state.value}
             />
           </div>
-          <div className='plot-temp'>
+          <div className='plot'>
             <Plot
               data={dataP}
               layout={layoutP}

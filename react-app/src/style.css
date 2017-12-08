@@ -4,8 +4,7 @@
   display: grid;
   grid-template-areas:
     "header header"
-    "calendar plot1"
-    "calendar plot2";
+    "calendar plot1";
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
 }
@@ -18,10 +17,6 @@
   grid-area: calendar;
 }
 
-.plot-temp {
+.plot {
   grid-area: plot1;
-}
-
-.plot-humd {
-  grid-area: plot2;
 }
