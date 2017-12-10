@@ -5,12 +5,11 @@ import './style.css'
 import moment from 'moment'
 import React from 'react'
 import Calendar from 'rc-calendar'
-
 import createPlotlyComponent from 'react-plotly.js/factory'
 
 const Plot = createPlotlyComponent(Plotly);
 
-export default class Hello extends React.Component {
+export default class Main extends React.Component {
 
   constructor(props) {
     super(props);
@@ -55,7 +54,7 @@ export default class Hello extends React.Component {
   plotData() {
     const startDate = moment(this.state.value.valueOf())
     let endDate = moment(this.state.value.valueOf())
-    endDate = endDate.add('days', 1)
+    endDate = endDate.add(1, 'days')
 
     return this.state.data.filter(el => el.date >= startDate.valueOf() && el.date <= endDate.valueOf())
   }
