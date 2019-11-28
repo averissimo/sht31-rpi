@@ -1,0 +1,4 @@
+agent:
+  name: example
+  server: 192.168.4.1
+  port: 20001

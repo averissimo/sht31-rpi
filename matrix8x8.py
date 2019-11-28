@@ -5,10 +5,10 @@ from PIL import ImageDraw
 
 from Adafruit_LED_Backpack import Matrix8x8
 
+#
 # Draw some shapes using the Python Imaging Library.
-
-
-
+#
+# Numbers and some letters
 def draw(val, type = ''):
     def digit(d, x0 = 0, y0 = 0):
         options = {0: zero, 1: one, 2: two, 3: three,
@@ -134,9 +134,12 @@ def draw(val, type = ''):
     draw = ImageDraw.Draw(image)
     if type == 'temp':
         t_letter()
+        getNum(val)
     elif type == 'humd':
         h_letter()
-    getNum(val)
+        getNum(val)
+    elif type == 'error':
+        error_letter()
 
     # Draw the image on the display buffer.
     display.set_image(image)

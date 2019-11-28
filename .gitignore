@@ -1,2 +1,8 @@
 *.png
 *.csv
+
+# virtualenv folders
+bin/
+include/
+lib/
+share/

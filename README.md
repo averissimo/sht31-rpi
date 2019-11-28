@@ -4,13 +4,27 @@ This library saves temperature and humidity data in a local Mongo database and g
 
 ### How to use it?
 
-run `python sensor.py` to add an entry to a local mongo database named `sensor` in a collection named `readings`.
+#### Install a virtualenv
 
-Run `plot.py` to plot the results
+```
+$ virtualenv -p python3 .
+$ source bin/activate
+$ pip install -r requirements
+```
+
+#### One time run that prints to screen
+
+`$ python one.py`
+
+#### Collect data for a minute
+
+`python sensor.py`
+
+to send a udp packet for the collecting agent. This requires that there's an agent listening and handling the data.
 
 #### To make periodical readings
 
-Create a cron job that runs every X time for the `sensor.py` script
+Create a cron job that runs every minute for the `sensor.py` script.
 
 ```
 # for readings every minute
@@ -20,11 +34,7 @@ Create a cron job that runs every X time for the `sensor.py` script
 
 ## Dependencies
 
-It depends on Python and the following libraries:
-- smbus
-- pymongo
-- matplotlib
-- dateutil.parser
+see `requirements.txt`
 
 ## License
 
