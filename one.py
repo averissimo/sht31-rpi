@@ -4,5 +4,5 @@ import time
 
 d = sensor.retrieve()
 
-print d
+print(d)
 

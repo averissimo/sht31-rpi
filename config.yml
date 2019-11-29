@@ -1,4 +1,4 @@
 agent:
-  name: example
+  name: rpi4
   server: 192.168.4.1
   port: 20001

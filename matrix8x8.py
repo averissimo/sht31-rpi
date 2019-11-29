@@ -127,6 +127,14 @@ def draw(val, type = ''):
     # Clear the display buffer.
     display.clear()
 
+    display.set_brightness(1)
+    
+    if type == 'clear':
+      # Draw the buffer to the display hardware.
+      display.write_display()
+      return
+
+
     # First create an 8x8 1 bit color image.
     image = Image.new('1', (8, 8))
 

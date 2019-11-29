@@ -32,6 +32,10 @@ Create a cron job that runs every minute for the `sensor.py` script.
 *  *	* * *	root    python /path/to/sensor.py
 ```
 
+## Print to 8x8 matrix
+
+must have a file named `screen_on.txt`
+
 ## Dependencies
 
 see `requirements.txt`

@@ -6,3 +6,7 @@ bin/
 include/
 lib/
 share/
+
+*.pyc
+
+screen_on.txt

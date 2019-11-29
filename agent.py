@@ -1,5 +1,6 @@
 import socket
 import yaml
+import json
 
 #
 # Load config file
@@ -15,11 +16,11 @@ def sendToNetworkDB(temperature, humidity):
   msgFromClient = json.dumps({
     'temperature': temperature,
     'humidity': humidity,
-    'host': cfg['name']
+    'host': cfg['agent']['name']
   })
 
   bytesToSend         = msgFromClient.encode('utf-8')
-  serverAddressPort   = (cfg['server'], cfg['port'])
+  serverAddressPort   = (cfg['agent']['server'], cfg['agent']['port'])
   bufferSize          = 1024
 
   # Create a UDP socket at client side
